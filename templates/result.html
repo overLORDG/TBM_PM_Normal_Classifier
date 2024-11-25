@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #e3ffe7, #d9e7ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .result-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #4caf50;
+        }
+
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        p strong {
+            color: #333;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Prediction Results</h2>
+        <p><strong>Predicted Class:</strong> {{ result['Predicted Class'] }}</p>
+        <p><strong>TBM Probability (%):</strong> {{ result['TBM Probability (%)'] }}</p>
+        <p><strong>PM Probability (%):</strong> {{ result['PM Probability (%)'] }}</p>
+        <p><strong>Normal Probability (%):</strong> {{ result['Normal Probability (%)'] }}</p>
+        <a href="/" class="btn">Make Another Prediction</a>
+    </div>
+</body>
+</html>
